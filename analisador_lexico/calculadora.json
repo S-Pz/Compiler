@@ -1,0 +1,686 @@
+[
+  [
+    {
+      "ReservedWords": "FUNCTION"
+    },
+    1
+  ],
+  [
+    {
+      "Identifier": "calculadora"
+    },
+    1
+  ],
+  [
+    {
+      "Punctuation": "L_BRACKET"
+    },
+    1
+  ],
+  [
+    {
+      "Identifier": "op"
+    },
+    1
+  ],
+  [
+    {
+      "Punctuation": "COLON"
+    },
+    1
+  ],
+  [
+    {
+      "ReservedWords": "CHAR"
+    },
+    1
+  ],
+  [
+    {
+      "Punctuation": "COMMA"
+    },
+    1
+  ],
+  [
+    {
+      "Identifier": "x"
+    },
+    1
+  ],
+  [
+    {
+      "Punctuation": "COLON"
+    },
+    1
+  ],
+  [
+    {
+      "ReservedWords": "FLOAT"
+    },
+    1
+  ],
+  [
+    {
+      "Punctuation": "COMMA"
+    },
+    1
+  ],
+  [
+    {
+      "Identifier": "y"
+    },
+    1
+  ],
+  [
+    {
+      "Punctuation": "COLON"
+    },
+    1
+  ],
+  [
+    {
+      "ReservedWords": "FLOAT"
+    },
+    1
+  ],
+  [
+    {
+      "Punctuation": "R_BRACKET"
+    },
+    1
+  ],
+  [
+    {
+      "MINUS": "MINUS"
+    },
+    1
+  ],
+  [
+    {
+      "GREATER_T": "GREATER_T"
+    },
+    1
+  ],
+  [
+    {
+      "ReservedWords": "FLOAT"
+    },
+    1
+  ],
+  [
+    {
+      "Punctuation": "L_BRACE"
+    },
+    1
+  ],
+  [
+    {
+      "ReservedWords": "if"
+    },
+    2
+  ],
+  [
+    {
+      "Identifier": "op"
+    },
+    2
+  ],
+  [
+    {
+      "COMPARISON": "COMPARISON"
+    },
+    2
+  ],
+  [
+    {
+      "CHAR_LITERAL": "'+'"
+    },
+    2
+  ],
+  [
+    {
+      "Punctuation": "L_BRACE"
+    },
+    2
+  ],
+  [
+    {
+      "Identifier": "return"
+    },
+    3
+  ],
+  [
+    {
+      "Identifier": "x"
+    },
+    3
+  ],
+  [
+    {
+      "PLUS": "PLUS"
+    },
+    3
+  ],
+  [
+    {
+      "Identifier": "y"
+    },
+    3
+  ],
+  [
+    {
+      "Punctuation": "P_COMMA"
+    },
+    3
+  ],
+  [
+    {
+      "Punctuation": "R_BRACE"
+    },
+    4
+  ],
+  [
+    {
+      "ReservedWords": "ELSE"
+    },
+    5
+  ],
+  [
+    {
+      "ReservedWords": "if"
+    },
+    5
+  ],
+  [
+    {
+      "Identifier": "op"
+    },
+    5
+  ],
+  [
+    {
+      "COMPARISON": "COMPARISON"
+    },
+    5
+  ],
+  [
+    {
+      "CHAR_LITERAL": "'-'"
+    },
+    5
+  ],
+  [
+    {
+      "Punctuation": "L_BRACE"
+    },
+    5
+  ],
+  [
+    {
+      "Identifier": "return"
+    },
+    6
+  ],
+  [
+    {
+      "Identifier": "x"
+    },
+    6
+  ],
+  [
+    {
+      "MINUS": "MINUS"
+    },
+    6
+  ],
+  [
+    {
+      "Identifier": "y"
+    },
+    6
+  ],
+  [
+    {
+      "Punctuation": "P_COMMA"
+    },
+    6
+  ],
+  [
+    {
+      "Punctuation": "R_BRACE"
+    },
+    7
+  ],
+  [
+    {
+      "ReservedWords": "ELSE"
+    },
+    8
+  ],
+  [
+    {
+      "ReservedWords": "if"
+    },
+    8
+  ],
+  [
+    {
+      "Identifier": "op"
+    },
+    8
+  ],
+  [
+    {
+      "COMPARISON": "COMPARISON"
+    },
+    8
+  ],
+  [
+    {
+      "CHAR_LITERAL": "'*'"
+    },
+    8
+  ],
+  [
+    {
+      "Punctuation": "L_BRACE"
+    },
+    8
+  ],
+  [
+    {
+      "Identifier": "return"
+    },
+    9
+  ],
+  [
+    {
+      "Identifier": "x"
+    },
+    9
+  ],
+  [
+    {
+      "MULT": "MULT"
+    },
+    9
+  ],
+  [
+    {
+      "Identifier": "y"
+    },
+    9
+  ],
+  [
+    {
+      "Punctuation": "P_COMMA"
+    },
+    9
+  ],
+  [
+    {
+      "Punctuation": "R_BRACE"
+    },
+    10
+  ],
+  [
+    {
+      "ReservedWords": "ELSE"
+    },
+    11
+  ],
+  [
+    {
+      "ReservedWords": "if"
+    },
+    11
+  ],
+  [
+    {
+      "Identifier": "op"
+    },
+    11
+  ],
+  [
+    {
+      "COMPARISON": "COMPARISON"
+    },
+    11
+  ],
+  [
+    {
+      "CHAR_LITERAL": "'/'"
+    },
+    11
+  ],
+  [
+    {
+      "Punctuation": "L_BRACE"
+    },
+    11
+  ],
+  [
+    {
+      "ReservedWords": "if"
+    },
+    12
+  ],
+  [
+    {
+      "Identifier": "y"
+    },
+    12
+  ],
+  [
+    {
+      "COMPARISON": "COMPARISON"
+    },
+    12
+  ],
+  [
+    {
+      "INTEGER_CONST": "0"
+    },
+    12
+  ],
+  [
+    {
+      "Punctuation": "L_BRACE"
+    },
+    12
+  ],
+  [
+    {
+      "Identifier": "return"
+    },
+    13
+  ],
+  [
+    {
+      "FLOAT_CONST": "0.0"
+    },
+    13
+  ],
+  [
+    {
+      "Punctuation": "P_COMMA"
+    },
+    13
+  ],
+  [
+    {
+      "Punctuation": "R_BRACE"
+    },
+    14
+  ],
+  [
+    {
+      "Identifier": "return"
+    },
+    15
+  ],
+  [
+    {
+      "Identifier": "x"
+    },
+    15
+  ],
+  [
+    {
+      "DIV": "DIV"
+    },
+    15
+  ],
+  [
+    {
+      "Identifier": "y"
+    },
+    15
+  ],
+  [
+    {
+      "Punctuation": "P_COMMA"
+    },
+    15
+  ],
+  [
+    {
+      "Punctuation": "R_BRACE"
+    },
+    16
+  ],
+  [
+    {
+      "Identifier": "return"
+    },
+    17
+  ],
+  [
+    {
+      "FLOAT_CONST": "0.0"
+    },
+    17
+  ],
+  [
+    {
+      "Punctuation": "P_COMMA"
+    },
+    17
+  ],
+  [
+    {
+      "Punctuation": "R_BRACE"
+    },
+    18
+  ],
+  [
+    {
+      "ReservedWords": "FUNCTION"
+    },
+    20
+  ],
+  [
+    {
+      "ReservedWords": "MAIN"
+    },
+    20
+  ],
+  [
+    {
+      "Punctuation": "L_BRACKET"
+    },
+    20
+  ],
+  [
+    {
+      "Punctuation": "R_BRACKET"
+    },
+    20
+  ],
+  [
+    {
+      "Punctuation": "L_BRACE"
+    },
+    20
+  ],
+  [
+    {
+      "ReservedWords": "LET"
+    },
+    21
+  ],
+  [
+    {
+      "Identifier": "a"
+    },
+    21
+  ],
+  [
+    {
+      "Punctuation": "COMMA"
+    },
+    21
+  ],
+  [
+    {
+      "Identifier": "b"
+    },
+    21
+  ],
+  [
+    {
+      "Punctuation": "COLON"
+    },
+    21
+  ],
+  [
+    {
+      "ReservedWords": "FLOAT"
+    },
+    21
+  ],
+  [
+    {
+      "Punctuation": "P_COMMA"
+    },
+    21
+  ],
+  [
+    {
+      "Identifier": "a"
+    },
+    22
+  ],
+  [
+    {
+      "Punctuation": "ATTR"
+    },
+    22
+  ],
+  [
+    {
+      "FLOAT_CONST": "1.8"
+    },
+    22
+  ],
+  [
+    {
+      "Punctuation": "P_COMMA"
+    },
+    22
+  ],
+  [
+    {
+      "Identifier": "b"
+    },
+    23
+  ],
+  [
+    {
+      "Punctuation": "ATTR"
+    },
+    23
+  ],
+  [
+    {
+      "FLOAT_CONST": "7.2"
+    },
+    23
+  ],
+  [
+    {
+      "Punctuation": "P_COMMA"
+    },
+    23
+  ],
+  [
+    {
+      "ReservedWords": "PRINT_LINE"
+    },
+    24
+  ],
+  [
+    {
+      "Punctuation": "L_BRACKET"
+    },
+    24
+  ],
+  [
+    {
+      "FORMATED_STRING": "\"{}\""
+    },
+    24
+  ],
+  [
+    {
+      "Punctuation": "COMMA"
+    },
+    24
+  ],
+  [
+    {
+      "Identifier": "calculadora"
+    },
+    24
+  ],
+  [
+    {
+      "Punctuation": "L_BRACKET"
+    },
+    24
+  ],
+  [
+    {
+      "CHAR_LITERAL": "'*'"
+    },
+    24
+  ],
+  [
+    {
+      "Punctuation": "COMMA"
+    },
+    24
+  ],
+  [
+    {
+      "Identifier": "a"
+    },
+    24
+  ],
+  [
+    {
+      "Punctuation": "COMMA"
+    },
+    24
+  ],
+  [
+    {
+      "Identifier": "b"
+    },
+    24
+  ],
+  [
+    {
+      "Punctuation": "R_BRACKET"
+    },
+    24
+  ],
+  [
+    {
+      "Punctuation": "R_BRACKET"
+    },
+    24
+  ],
+  [
+    {
+      "Punctuation": "P_COMMA"
+    },
+    24
+  ],
+  [
+    {
+      "Punctuation": "R_BRACE"
+    },
+    25
+  ]
+]

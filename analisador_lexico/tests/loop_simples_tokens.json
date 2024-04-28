@@ -1,0 +1,240 @@
+[
+  [
+    {
+      "ReservedWords": "Function"
+    },
+    0,
+    2
+  ],
+  [
+    {
+      "ReservedWords": "Main"
+    },
+    3,
+    7
+  ],
+  [
+    {
+      "Punctuation": "LParen"
+    },
+    7,
+    8
+  ],
+  [
+    {
+      "Punctuation": "RParen"
+    },
+    8,
+    9
+  ],
+  [
+    {
+      "Punctuation": "LBrace"
+    },
+    9,
+    10
+  ],
+  [
+    {
+      "ReservedWords": "Let"
+    },
+    4,
+    7
+  ],
+  [
+    {
+      "Identifier": "i"
+    },
+    8,
+    9
+  ],
+  [
+    {
+      "Punctuation": "Colon"
+    },
+    9,
+    10
+  ],
+  [
+    {
+      "ReservedWords": "Int"
+    },
+    11,
+    14
+  ],
+  [
+    {
+      "Punctuation": "Semicolon"
+    },
+    14,
+    15
+  ],
+  [
+    {
+      "Identifier": "i"
+    },
+    4,
+    5
+  ],
+  [
+    {
+      "Operators": "Assign"
+    },
+    6,
+    7
+  ],
+  [
+    {
+      "IntConst": 0
+    },
+    8,
+    9
+  ],
+  [
+    {
+      "Punctuation": "Semicolon"
+    },
+    9,
+    10
+  ],
+  [
+    {
+      "ReservedWords": "While"
+    },
+    4,
+    9
+  ],
+  [
+    {
+      "Identifier": "i"
+    },
+    10,
+    11
+  ],
+  [
+    {
+      "Operators": "LessThan"
+    },
+    12,
+    13
+  ],
+  [
+    {
+      "IntConst": 10
+    },
+    14,
+    16
+  ],
+  [
+    {
+      "Punctuation": "LBrace"
+    },
+    17,
+    18
+  ],
+  [
+    {
+      "ReservedWords": "Println"
+    },
+    8,
+    15
+  ],
+  [
+    {
+      "Punctuation": "LParen"
+    },
+    15,
+    16
+  ],
+  [
+    {
+      "FormattedString": "{}"
+    },
+    16,
+    20
+  ],
+  [
+    {
+      "Punctuation": "Comma"
+    },
+    20,
+    21
+  ],
+  [
+    {
+      "Identifier": "i"
+    },
+    22,
+    23
+  ],
+  [
+    {
+      "Punctuation": "RParen"
+    },
+    23,
+    24
+  ],
+  [
+    {
+      "Punctuation": "Semicolon"
+    },
+    24,
+    25
+  ],
+  [
+    {
+      "Identifier": "i"
+    },
+    8,
+    9
+  ],
+  [
+    {
+      "Operators": "Assign"
+    },
+    10,
+    11
+  ],
+  [
+    {
+      "Identifier": "i"
+    },
+    12,
+    13
+  ],
+  [
+    {
+      "Operators": "Plus"
+    },
+    14,
+    15
+  ],
+  [
+    {
+      "IntConst": 1
+    },
+    16,
+    17
+  ],
+  [
+    {
+      "Punctuation": "Semicolon"
+    },
+    17,
+    18
+  ],
+  [
+    {
+      "Punctuation": "RBrace"
+    },
+    4,
+    5
+  ],
+  [
+    {
+      "Punctuation": "RBrace"
+    },
+    0,
+    1
+  ]
+]
