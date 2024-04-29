@@ -16,21 +16,22 @@ class LexicalAnalyzer:
         'while'     : 'WHILE',
         'print'     : 'PRINT',
         'println'   : 'PRINT_LINE',
+        'return'    : 'RETURN',
     }
     
     operators = {
         '=='        : 'COMPARISON',
         '!='        : 'DIFFERENCE',
-        '<'         : 'LESS_T',
         '<='        : 'LESS_EQUAL_T',
-        '>'         : 'GREATER_T',
+        '<'         : 'LESS_T',
         '>='        : 'GREATER_EQUAL_T',
+        '>'         : 'GREATER_T',
         '+'         : 'PLUS',
+        '->'        : 'ARROW',
         '-'         : 'MINUS',
         '*'         : 'MULT',
         '/'         : 'DIV',
         '='         : 'ATTR',
-        '->'        : 'ARROW',
     }
 
     punctuation =  {
@@ -69,7 +70,7 @@ class LexicalAnalyzer:
 
                         (LexicalAnalyzer.id_pattern, 'ID'),
                         (LexicalAnalyzer.char_literal_pattern, 'CHAR_LITERAL'),
-                        (LexicalAnalyzer.formated_string_pattern, 'FORMATED_STRING'),
+                        (LexicalAnalyzer.formated_string_pattern, 'FORMATTED_STRING'),
                         (LexicalAnalyzer.float_const_pattern, 'FLOAT_CONST'),
                         (LexicalAnalyzer.integer_const_pattern, 'INTEGER_CONST'),
                     ]:
@@ -86,15 +87,16 @@ class LexicalAnalyzer:
                                     tokens.append(({'Identifier' : value}, line_number))
                             else :
                                 tokens.append(({token_type : value}, line_number))
+                            
                             position = match.end()
+                            
                             break
                     else:
                         for operator, token_type in LexicalAnalyzer.operators.items():
+                           
                             if line.startswith(operator, position):
-                                
                                 tokens.append(({'Operators': LexicalAnalyzer.operators[operator]}, line_number))
                                 position += len(operator)
-                                
                                 break
                         else:
                             for punctuation_mark, token_type in LexicalAnalyzer.punctuation.items():

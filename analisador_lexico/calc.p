@@ -8,7 +8,7 @@ fn calculadora(op: char, x: float, y: float) -> float {
     else if op == '*'{
         return x * y;
     }
-    else if op == '/' {
+    else if op >= '/' {
         if y == 0 {
             return 0.0;
         }
