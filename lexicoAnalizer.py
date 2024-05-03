@@ -108,18 +108,15 @@ class LexicalAnalyzer:
                                     pass
                                 else:
                     
-                                    raise ValueError(f"Erro léxico na Linha: {line_number} Posição: {position}")
+                                    raise ValueError(f"Lexical error: line {line_number} column: {position}")
                                 position += 1  # Ignorar caracteres desconhecido
             return tokens
 
+
 token_list  = LexicalAnalyzer.lexer(sys.argv[1])
-
-
-    
 
 num_linha = 1
 
-# Parte 2 -- Analisador sintatico
 i = 0
 print(token_list[0][2])
 print(token_list[1][1])
@@ -133,9 +130,6 @@ for key, value in token_list[i][0].items():
 
 def combina(TOKEN_ESPERADO):
     global i, token_list, TOKEN_ENTRADA, num_linha
-
-    print(TOKEN_ENTRADA)
-    print(TOKEN_ESPERADO)
 
     try:
 
