@@ -1,4 +1,0 @@
-Nomes : Pedro Garcia, Sávio Francisco
-Analisadores lexicos e sintáticos
-
-Para executar o programa: $ python3 syntax.py Arquivo.p
