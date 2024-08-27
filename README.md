@@ -27,7 +27,7 @@ The compilers discipline covers foundational concepts and practical techniques i
 
 To execute the code use: 
 ```python3 
-$ python3 main.py File.p
+$ python3 syntax.py File.p
  
 ```
 - The **files.p** you can find inside the folder **Tests.**
