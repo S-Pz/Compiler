@@ -1,0 +1,793 @@
+[
+  [
+    {
+      "ReservedWords": "Function"
+    },
+    0,
+    2
+  ],
+  [
+    {
+      "Identifier": "calculadora"
+    },
+    3,
+    14
+  ],
+  [
+    {
+      "Punctuation": "LParen"
+    },
+    14,
+    15
+  ],
+  [
+    {
+      "Identifier": "op"
+    },
+    15,
+    17
+  ],
+  [
+    {
+      "Punctuation": "Colon"
+    },
+    17,
+    18
+  ],
+  [
+    {
+      "ReservedWords": "Char"
+    },
+    19,
+    23
+  ],
+  [
+    {
+      "Punctuation": "Comma"
+    },
+    23,
+    24
+  ],
+  [
+    {
+      "Identifier": "x"
+    },
+    25,
+    26
+  ],
+  [
+    {
+      "Punctuation": "Colon"
+    },
+    26,
+    27
+  ],
+  [
+    {
+      "ReservedWords": "Float"
+    },
+    28,
+    33
+  ],
+  [
+    {
+      "Punctuation": "Comma"
+    },
+    33,
+    34
+  ],
+  [
+    {
+      "Identifier": "y"
+    },
+    35,
+    36
+  ],
+  [
+    {
+      "Punctuation": "Colon"
+    },
+    36,
+    37
+  ],
+  [
+    {
+      "ReservedWords": "Float"
+    },
+    38,
+    43
+  ],
+  [
+    {
+      "Punctuation": "RParen"
+    },
+    43,
+    44
+  ],
+  [
+    {
+      "Operators": "Arrow"
+    },
+    45,
+    47
+  ],
+  [
+    {
+      "ReservedWords": "Float"
+    },
+    48,
+    53
+  ],
+  [
+    {
+      "Punctuation": "LBrace"
+    },
+    54,
+    55
+  ],
+  [
+    {
+      "ReservedWords": "If"
+    },
+    4,
+    6
+  ],
+  [
+    {
+      "Identifier": "op"
+    },
+    7,
+    9
+  ],
+  [
+    {
+      "Operators": "Equal"
+    },
+    10,
+    12
+  ],
+  [
+    {
+      "CharConst": "+"
+    },
+    13,
+    16
+  ],
+  [
+    {
+      "Punctuation": "LBrace"
+    },
+    17,
+    18
+  ],
+  [
+    {
+      "ReservedWords": "Return"
+    },
+    8,
+    14
+  ],
+  [
+    {
+      "Identifier": "x"
+    },
+    15,
+    16
+  ],
+  [
+    {
+      "Operators": "Plus"
+    },
+    17,
+    18
+  ],
+  [
+    {
+      "Identifier": "y"
+    },
+    19,
+    20
+  ],
+  [
+    {
+      "Punctuation": "Semicolon"
+    },
+    20,
+    21
+  ],
+  [
+    {
+      "Punctuation": "RBrace"
+    },
+    4,
+    5
+  ],
+  [
+    {
+      "ReservedWords": "Else"
+    },
+    4,
+    8
+  ],
+  [
+    {
+      "ReservedWords": "If"
+    },
+    9,
+    11
+  ],
+  [
+    {
+      "Identifier": "op"
+    },
+    12,
+    14
+  ],
+  [
+    {
+      "Operators": "Equal"
+    },
+    15,
+    17
+  ],
+  [
+    {
+      "CharConst": "-"
+    },
+    18,
+    21
+  ],
+  [
+    {
+      "Punctuation": "LBrace"
+    },
+    21,
+    22
+  ],
+  [
+    {
+      "ReservedWords": "Return"
+    },
+    8,
+    14
+  ],
+  [
+    {
+      "Identifier": "x"
+    },
+    15,
+    16
+  ],
+  [
+    {
+      "Operators": "Minus"
+    },
+    17,
+    18
+  ],
+  [
+    {
+      "Identifier": "y"
+    },
+    19,
+    20
+  ],
+  [
+    {
+      "Punctuation": "Semicolon"
+    },
+    20,
+    21
+  ],
+  [
+    {
+      "Punctuation": "RBrace"
+    },
+    4,
+    5
+  ],
+  [
+    {
+      "ReservedWords": "Else"
+    },
+    4,
+    8
+  ],
+  [
+    {
+      "ReservedWords": "If"
+    },
+    9,
+    11
+  ],
+  [
+    {
+      "Identifier": "op"
+    },
+    12,
+    14
+  ],
+  [
+    {
+      "Operators": "Equal"
+    },
+    15,
+    17
+  ],
+  [
+    {
+      "CharConst": "*"
+    },
+    18,
+    21
+  ],
+  [
+    {
+      "Punctuation": "LBrace"
+    },
+    21,
+    22
+  ],
+  [
+    {
+      "ReservedWords": "Return"
+    },
+    8,
+    14
+  ],
+  [
+    {
+      "Identifier": "x"
+    },
+    15,
+    16
+  ],
+  [
+    {
+      "Operators": "Multiplication"
+    },
+    17,
+    18
+  ],
+  [
+    {
+      "Identifier": "y"
+    },
+    19,
+    20
+  ],
+  [
+    {
+      "Punctuation": "Semicolon"
+    },
+    20,
+    21
+  ],
+  [
+    {
+      "Punctuation": "RBrace"
+    },
+    4,
+    5
+  ],
+  [
+    {
+      "ReservedWords": "Else"
+    },
+    4,
+    8
+  ],
+  [
+    {
+      "ReservedWords": "If"
+    },
+    9,
+    11
+  ],
+  [
+    {
+      "Identifier": "op"
+    },
+    12,
+    14
+  ],
+  [
+    {
+      "Operators": "Equal"
+    },
+    15,
+    17
+  ],
+  [
+    {
+      "CharConst": "/"
+    },
+    18,
+    21
+  ],
+  [
+    {
+      "Punctuation": "LBrace"
+    },
+    22,
+    23
+  ],
+  [
+    {
+      "ReservedWords": "If"
+    },
+    8,
+    10
+  ],
+  [
+    {
+      "Identifier": "y"
+    },
+    11,
+    12
+  ],
+  [
+    {
+      "Operators": "Equal"
+    },
+    13,
+    15
+  ],
+  [
+    {
+      "IntConst": 0
+    },
+    16,
+    17
+  ],
+  [
+    {
+      "Punctuation": "LBrace"
+    },
+    18,
+    19
+  ],
+  [
+    {
+      "ReservedWords": "Return"
+    },
+    12,
+    18
+  ],
+  [
+    {
+      "FloatConst": 0.0
+    },
+    19,
+    22
+  ],
+  [
+    {
+      "Punctuation": "Semicolon"
+    },
+    22,
+    23
+  ],
+  [
+    {
+      "Punctuation": "RBrace"
+    },
+    8,
+    9
+  ],
+  [
+    {
+      "ReservedWords": "Return"
+    },
+    8,
+    14
+  ],
+  [
+    {
+      "Identifier": "x"
+    },
+    15,
+    16
+  ],
+  [
+    {
+      "Operators": "Division"
+    },
+    17,
+    18
+  ],
+  [
+    {
+      "Identifier": "y"
+    },
+    19,
+    20
+  ],
+  [
+    {
+      "Punctuation": "Semicolon"
+    },
+    20,
+    21
+  ],
+  [
+    {
+      "Punctuation": "RBrace"
+    },
+    4,
+    5
+  ],
+  [
+    {
+      "ReservedWords": "Return"
+    },
+    4,
+    10
+  ],
+  [
+    {
+      "FloatConst": 0.0
+    },
+    11,
+    14
+  ],
+  [
+    {
+      "Punctuation": "Semicolon"
+    },
+    14,
+    15
+  ],
+  [
+    {
+      "Punctuation": "RBrace"
+    },
+    0,
+    1
+  ],
+  [
+    {
+      "ReservedWords": "Function"
+    },
+    0,
+    2
+  ],
+  [
+    {
+      "ReservedWords": "Main"
+    },
+    3,
+    7
+  ],
+  [
+    {
+      "Punctuation": "LParen"
+    },
+    7,
+    8
+  ],
+  [
+    {
+      "Punctuation": "RParen"
+    },
+    8,
+    9
+  ],
+  [
+    {
+      "Punctuation": "LBrace"
+    },
+    9,
+    10
+  ],
+  [
+    {
+      "ReservedWords": "Let"
+    },
+    4,
+    7
+  ],
+  [
+    {
+      "Identifier": "a"
+    },
+    8,
+    9
+  ],
+  [
+    {
+      "Punctuation": "Comma"
+    },
+    9,
+    10
+  ],
+  [
+    {
+      "Identifier": "b"
+    },
+    11,
+    12
+  ],
+  [
+    {
+      "Punctuation": "Colon"
+    },
+    12,
+    13
+  ],
+  [
+    {
+      "ReservedWords": "Float"
+    },
+    14,
+    19
+  ],
+  [
+    {
+      "Punctuation": "Semicolon"
+    },
+    19,
+    20
+  ],
+  [
+    {
+      "Identifier": "a"
+    },
+    4,
+    5
+  ],
+  [
+    {
+      "Operators": "Assign"
+    },
+    6,
+    7
+  ],
+  [
+    {
+      "FloatConst": 1.8
+    },
+    8,
+    11
+  ],
+  [
+    {
+      "Punctuation": "Semicolon"
+    },
+    11,
+    12
+  ],
+  [
+    {
+      "Identifier": "b"
+    },
+    4,
+    5
+  ],
+  [
+    {
+      "Operators": "Assign"
+    },
+    6,
+    7
+  ],
+  [
+    {
+      "FloatConst": 7.2
+    },
+    8,
+    11
+  ],
+  [
+    {
+      "Punctuation": "Semicolon"
+    },
+    11,
+    12
+  ],
+  [
+    {
+      "ReservedWords": "Println"
+    },
+    4,
+    11
+  ],
+  [
+    {
+      "Punctuation": "LParen"
+    },
+    11,
+    12
+  ],
+  [
+    {
+      "FormattedString": "{}"
+    },
+    12,
+    16
+  ],
+  [
+    {
+      "Punctuation": "Comma"
+    },
+    16,
+    17
+  ],
+  [
+    {
+      "Identifier": "calculadora"
+    },
+    18,
+    29
+  ],
+  [
+    {
+      "Punctuation": "LParen"
+    },
+    29,
+    30
+  ],
+  [
+    {
+      "CharConst": "*"
+    },
+    30,
+    33
+  ],
+  [
+    {
+      "Punctuation": "Comma"
+    },
+    33,
+    34
+  ],
+  [
+    {
+      "Identifier": "a"
+    },
+    35,
+    36
+  ],
+  [
+    {
+      "Punctuation": "Comma"
+    },
+    36,
+    37
+  ],
+  [
+    {
+      "Identifier": "b"
+    },
+    38,
+    39
+  ],
+  [
+    {
+      "Punctuation": "RParen"
+    },
+    39,
+    40
+  ],
+  [
+    {
+      "Punctuation": "RParen"
+    },
+    40,
+    41
+  ],
+  [
+    {
+      "Punctuation": "Semicolon"
+    },
+    41,
+    42
+  ],
+  [
+    {
+      "Punctuation": "RBrace"
+    },
+    0,
+    1
+  ]
+]
