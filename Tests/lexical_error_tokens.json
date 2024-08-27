@@ -1,0 +1,282 @@
+[
+  [
+    {
+      "ReservedWords": "Function"
+    },
+    0,
+    2
+  ],
+  [
+    {
+      "ReservedWords": "Main"
+    },
+    3,
+    7
+  ],
+  [
+    {
+      "Punctuation": "LParen"
+    },
+    7,
+    8
+  ],
+  [
+    {
+      "Punctuation": "RParen"
+    },
+    8,
+    9
+  ],
+  [
+    {
+      "Punctuation": "LBrace"
+    },
+    9,
+    10
+  ],
+  [
+    {
+      "ReservedWords": "Let"
+    },
+    4,
+    7
+  ],
+  [
+    {
+      "Identifier": "a"
+    },
+    8,
+    9
+  ],
+  [
+    {
+      "Punctuation": "Comma"
+    },
+    9,
+    10
+  ],
+  [
+    {
+      "Identifier": "b"
+    },
+    11,
+    12
+  ],
+  [
+    {
+      "Punctuation": "Comma"
+    },
+    12,
+    13
+  ],
+  [
+    {
+      "Identifier": "c"
+    },
+    14,
+    15
+  ],
+  [
+    {
+      "Punctuation": "Colon"
+    },
+    15,
+    16
+  ],
+  [
+    {
+      "ReservedWords": "Int"
+    },
+    17,
+    20
+  ],
+  [
+    {
+      "Punctuation": "Semicolon"
+    },
+    20,
+    21
+  ],
+  [
+    {
+      "Identifier": "b"
+    },
+    4,
+    5
+  ],
+  [
+    {
+      "Error": "Unkown char ["
+    },
+    5,
+    6
+  ],
+  [
+    {
+      "Error": "Unkown char ]"
+    },
+    6,
+    7
+  ],
+  [
+    {
+      "Operators": "Assign"
+    },
+    8,
+    9
+  ],
+  [
+    {
+      "IntConst": 40
+    },
+    10,
+    12
+  ],
+  [
+    {
+      "Punctuation": "Semicolon"
+    },
+    12,
+    13
+  ],
+  [
+    {
+      "Identifier": "c"
+    },
+    4,
+    5
+  ],
+  [
+    {
+      "Operators": "Assign"
+    },
+    6,
+    7
+  ],
+  [
+    {
+      "IntConst": 39
+    },
+    8,
+    10
+  ],
+  [
+    {
+      "Punctuation": "Semicolon"
+    },
+    10,
+    11
+  ],
+  [
+    {
+      "Error": "Unkown char $"
+    },
+    4,
+    5
+  ],
+  [
+    {
+      "Identifier": "a"
+    },
+    5,
+    6
+  ],
+  [
+    {
+      "Operators": "Assign"
+    },
+    7,
+    8
+  ],
+  [
+    {
+      "Identifier": "b"
+    },
+    9,
+    10
+  ],
+  [
+    {
+      "Operators": "Minus"
+    },
+    11,
+    12
+  ],
+  [
+    {
+      "Identifier": "c"
+    },
+    13,
+    14
+  ],
+  [
+    {
+      "Punctuation": "Semicolon"
+    },
+    14,
+    15
+  ],
+  [
+    {
+      "ReservedWords": "Print"
+    },
+    4,
+    9
+  ],
+  [
+    {
+      "Punctuation": "LParen"
+    },
+    9,
+    10
+  ],
+  [
+    {
+      "FormattedString": "{}"
+    },
+    10,
+    14
+  ],
+  [
+    {
+      "Punctuation": "Comma"
+    },
+    14,
+    15
+  ],
+  [
+    {
+      "Error": "Unkown char &"
+    },
+    16,
+    17
+  ],
+  [
+    {
+      "Identifier": "a"
+    },
+    17,
+    18
+  ],
+  [
+    {
+      "Punctuation": "RParen"
+    },
+    18,
+    19
+  ],
+  [
+    {
+      "Punctuation": "Semicolon"
+    },
+    19,
+    20
+  ],
+  [
+    {
+      "Punctuation": "RBrace"
+    },
+    0,
+    1
+  ]
+]
