@@ -1,6 +1,6 @@
 ##########################################
 # Nome: Perdo Garcia, Sávio Francisco    #
-# Analisardor Sintático                  #
+# Analisador Sintático                  #
 ##########################################
 
 from lexical import LexicalAnalyzer
@@ -129,7 +129,8 @@ def fun(EXPECTED_TOKEN):
     params_list(EXPECTED_TOKEN)
     match("R_BRACKET")
     return_type(EXPECTED_TOKEN)
-    block(EXPECTED_TOKEN, func_node)
+    block_node = block(EXPECTED_TOKEN, func_node)
+    func_node.add_child(block_node)
     print(func_node)
 
 def params_list(EXPECTED_TOKEN):
@@ -183,15 +184,15 @@ def return_type(EXPECTED_TOKEN):
     else:
         return
 
-def block(EXPECTED_TOKEN, func_node : ASTNode):
+def block(EXPECTED_TOKEN):
     match("L_BRACE")
     block_node = ASTNode("BLOCK")   #Cria o Node Bloco
     seq(EXPECTED_TOKEN, block_node) #Passa o Node bloco pra seq
-    func_node.add_child(block_node) #Coloca como filho de function
     match("R_BRACE")
+    return block_node
 
 def seq(EXPECTED_TOKEN, block_node : ASTNode):
-    
+
     global INPUT_TOKEN
 
     if ("LET" in INPUT_TOKEN):
@@ -206,7 +207,8 @@ def seq(EXPECTED_TOKEN, block_node : ASTNode):
             "PRINT_LINE" in INPUT_TOKEN or
             "RETURN" in INPUT_TOKEN):
             
-            comands(EXPECTED_TOKEN, block_node) #passa nó bloco e retorna
+            no = comands(EXPECTED_TOKEN)
+            block_node.add_child(no)
             seq(EXPECTED_TOKEN, block_node) #passa nó bloco e retorna
     return
 
@@ -259,22 +261,23 @@ def type(EXPECTED_TOKEN):
         match("CHAR")
         return "CHAR"
 
-def comands(EXPECTED_TOKEN, block_node : ASTNode):
+def comands(EXPECTED_TOKEN):
 
     global INPUT_TOKEN, INPUT_VALUE
 
     if ("Identifier" in INPUT_TOKEN):
-        id = ASTNode("ID", value=INPUT_VALUE)
+        id_node = ASTNode("ID", value=INPUT_VALUE)
         match("Identifier")
-        attr_or_call(EXPECTED_TOKEN, block_node)
+        return attr_or_call(EXPECTED_TOKEN, id_node)
     
     elif ("if" in INPUT_TOKEN):
         if_command(EXPECTED_TOKEN)
     
     elif ("WHILE" in INPUT_TOKEN):
         match("WHILE")
-        expression(EXPECTED_TOKEN)
-        block(EXPECTED_TOKEN)
+        no_expr = expression(EXPECTED_TOKEN)
+        no_bloco = block(EXPECTED_TOKEN)
+        return ASTNode('While', children=[no_expr, no_bloco])
     
     elif ("PRINT" == INPUT_TOKEN):
         match("PRINT")
@@ -299,7 +302,7 @@ def comands(EXPECTED_TOKEN, block_node : ASTNode):
         expression(EXPECTED_TOKEN)
         match("P_COMMA")
 
-def attr_or_call(EXPECTED_TOKEN, block_node : ASTNode):
+def attr_or_call(EXPECTED_TOKEN, id_node : ASTNode):
 
     global INPUT_TOKEN
     
@@ -308,12 +311,14 @@ def attr_or_call(EXPECTED_TOKEN, block_node : ASTNode):
         match("ATTR")
         expression(EXPECTED_TOKEN)
         match("P_COMMA")
+        return attr_node
 
     elif ("L_BRACKET" in INPUT_TOKEN):
         match("L_BRACKET")
         args_list(EXPECTED_TOKEN)
         match("R_BRACKET")
-
+        return None
+        #TODO
 def if_command(EXPECTED_TOKEN):
     
     global INPUT_TOKEN
@@ -339,37 +344,46 @@ def else_command(EXPECTED_TOKEN):
 
 def expression(EXPECTED_TOKEN):
     
-    relational_expression(EXPECTED_TOKEN)
-    expression_opc(EXPECTED_TOKEN)
+    no_esq = relational_expression(EXPECTED_TOKEN)
+    return expression_opc(EXPECTED_TOKEN, no_esq)
 
-def expression_opc(EXPECTED_TOKEN):
+def expression_opc(EXPECTED_TOKEN, no_esq):
     
-    global INPUT_TOKEN
+    global INPUT_TOKEN, INPUT_VALUE
 
-    if("COMPARISON" in INPUT_TOKEN or 
-        "DIFFERENCE" in INPUT_TOKEN):
+    if("COMPARISON" in INPUT_TOKEN or "DIFFERENCE" in INPUT_TOKEN):
         
+        op = INPUT_VALUE
         iqual_operation(EXPECTED_TOKEN)
-        relational_expression(EXPECTED_TOKEN)
-        expression_opc(EXPECTED_TOKEN)
+        
+        no_dir = relational_expression(EXPECTED_TOKEN)
+        no = ASTNode("RelOp", value=op)
+        no.add_child(no_esq)
+        no.add_child(no_dir)
+        
+        return expression_opc(EXPECTED_TOKEN, no)
     
     else:
-        return
+        return no_esq
 
 def relational_expression(EXPECTED_TOKEN): #expressões relacionais
-    sum(EXPECTED_TOKEN)
-    relational_expression_oper(EXPECTED_TOKEN)
+    no_esq = sum(EXPECTED_TOKEN)
+    return relational_expression_oper(EXPECTED_TOKEN, no_esq)
 
-def relational_expression_oper(EXPECTED_TOKEN): #lida com operadores de comparação em expressões relacionais
+def relational_expression_oper(EXPECTED_TOKEN, no_esq : ASTNode): #lida com operadores de comparação em expressões relacionais
     
-    global INPUT_TOKEN
+    global INPUT_TOKEN, INPUT_VALUE
     
     if (INPUT_TOKEN in ["GREATER_T", "GREATER_EQUAL_T", "LESS_T", "LESS_EQUAL_T"]):
-        relational_operation(EXPECTED_TOKEN)
-        sum(EXPECTED_TOKEN)
-        relational_expression_oper(EXPECTED_TOKEN)
+        op = INPUT_VALUE
+        relational_operation(EXPECTED_TOKEN)        
+        no_dir : ASTNode = sum(EXPECTED_TOKEN)
+        no = ASTNode("RelOp", value=op)
+        no.add_child(no_esq)
+        no.add_child(no_dir)
+        return  relational_expression_oper(EXPECTED_TOKEN,no)
     else:
-        return
+        return no_esq
 
 def iqual_operation(EXPECTED_TOKEN):
 
@@ -397,19 +411,25 @@ def relational_operation(EXPECTED_TOKEN): #operações relacionais
         match("GREATER_EQUAL_T")
 
 def sum(EXPECTED_TOKEN): #Adição
-    term(EXPECTED_TOKEN)
-    sum_opc(EXPECTED_TOKEN)
+    no_esq = term(EXPECTED_TOKEN)
+    return sum_opc(EXPECTED_TOKEN, no_esq)
 
-def sum_opc(EXPECTED_TOKEN):#Operadores de adição em expressões aritméticas
-    
+def sum_opc(EXPECTED_TOKEN, no_esq : ASTNode):#Operadores de adição em expressões aritméticas
+    global INPUT_TOKEN, INPUT_VALUE
+
     if ("PLUS" in INPUT_TOKEN or
         "MINUS" in INPUT_TOKEN):
-        
+        op = INPUT_VALUE
         sum_operation(EXPECTED_TOKEN)
-        term(EXPECTED_TOKEN)
-        sum_opc(EXPECTED_TOKEN)
+        no_dir = term(EXPECTED_TOKEN)
+
+        no = ASTNode("Aritop", value=op)
+        no.add_child(no_esq)
+        no.add_child(no_dir)
+        return sum_opc(EXPECTED_TOKEN, no)
+    
     else:
-        return
+        return no_esq
 
 def sum_operation(EXPECTED_TOKEN):#Verifica qual operador de adição está presente no token atual 
 
@@ -421,19 +441,23 @@ def sum_operation(EXPECTED_TOKEN):#Verifica qual operador de adição está pres
         match("MINUS")
 
 def term(EXPECTED_TOKEN):
-    factor(EXPECTED_TOKEN)
-    termo_opc(EXPECTED_TOKEN)
+    no_esq = factor(EXPECTED_TOKEN)
+    return termo_opc(EXPECTED_TOKEN, no_esq)
 
-def termo_opc(EXPECTED_TOKEN):
+def termo_opc(EXPECTED_TOKEN, no_esq : ASTNode):
     
-    global INPUT_TOKEN
+    global INPUT_TOKEN, INPUT_VALUE
     
     if ("MULT" in INPUT_TOKEN or "DIV" in INPUT_TOKEN):
+        op = INPUT_VALUE
         mul_operation(EXPECTED_TOKEN)
-        factor(EXPECTED_TOKEN)
-        termo_opc(EXPECTED_TOKEN)
+        no_dir = factor(EXPECTED_TOKEN )
+        no_arith = ASTNode("Arith_NODE", value=op)
+        no_arith.add_child(no_esq)
+        no_arith.add_child(no_dir)
+        return termo_opc(EXPECTED_TOKEN, no_arith)
     else:
-        return
+        return no_esq
 
 def mul_operation(EXPECTED_TOKEN):
     global INPUT_TOKEN
@@ -446,55 +470,72 @@ def mul_operation(EXPECTED_TOKEN):
 
 def factor(EXPECTED_TOKEN):
     
-    global INPUT_TOKEN
+    global INPUT_TOKEN, INPUT_VALUE
     
     if ("Identifier" in INPUT_TOKEN):
+        node = ASTNode("ID_NODE", value=INPUT_VALUE)
         match("Identifier")
-        call_function(EXPECTED_TOKEN)
-    
+        node_call : ASTNode = call_function(EXPECTED_TOKEN)
+        
+        if node_call is None:
+            return node
+        else :
+            return node_call
+
     elif ("INTEGER_CONST" in INPUT_TOKEN):
+        no = ASTNode("INT_CONST", value=INPUT_VALUE)
         match("INTEGER_CONST")
+        return no
     
     elif ("FLOAT_CONST" in INPUT_TOKEN):
+        no = ASTNode("FLOAT_CONST", value=INPUT_VALUE)
         match("FLOAT_CONST")
+        return no
     
     elif ("CHAR_LITERAL" in INPUT_TOKEN):
+        no = ASTNode("CHAR_LITERAL", value=INPUT_VALUE)
         match("CHAR_LITERAL")
+        return no
     
     elif ("L_BRACKET" in INPUT_TOKEN):
         match("L_BRACKET")
-        expression(EXPECTED_TOKEN)
+        no = expression(EXPECTED_TOKEN)
         match("R_BRACKET")
-
+        return no
+    
 def call_function(EXPECTED_TOKEN):
     
     global INPUT_TOKEN
     
     if ("L_BRACKET" in INPUT_TOKEN):
+        call_node = ASTNode("CALL_NODE")
         match("L_BRACKET")
-        args_list(EXPECTED_TOKEN)
+        args_list(EXPECTED_TOKEN, call_node)
         match("R_BRACKET")
+        return call_node
     else:
-        return
+        return None
 
-def args_list(EXPECTED_TOKEN):
+def args_list(EXPECTED_TOKEN, call_node : ASTNode):
     
     global INPUT_TOKEN
 
     if (INPUT_TOKEN in ["Identifier", "INTEGER_CONST", "FLOAT_CONST", "CHAR_LITERAL", "L_BRACKET"]):
-        factor(EXPECTED_TOKEN)
-        args_list_2(EXPECTED_TOKEN)
+        factor_node : ASTNode = factor(EXPECTED_TOKEN)
+        call_node.add_child(factor_node)
+        args_list_2(EXPECTED_TOKEN, call_node)
     else:
         return
 
-def args_list_2(EXPECTED_TOKEN):
+def args_list_2(EXPECTED_TOKEN, call_node : ASTNode):
     
     global INPUT_TOKEN
     
     if ("COMMA" in INPUT_TOKEN):
         match("COMMA")
-        factor(EXPECTED_TOKEN)
-        args_list_2(EXPECTED_TOKEN)
+        factor_node : ASTNode = factor(EXPECTED_TOKEN)
+        call_node.add_child(factor_node)
+        args_list_2(EXPECTED_TOKEN, call_node)
     else:
         return
     
